@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+  &__wrapper {
+    background-color: var(--header-bg);
+    width: 100%;
+    padding: 0.5rem 2.5rem;
+  }
+  &__wrapper.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &__logo {
+    width: 70px;
+    height: 70px;
+    & img {
+      border-radius: 999px;
+      object-fit: cover;
+    }
+  }
+  &__nav {
+    flex: 1;
+    & li a {
+      font-size: 1rem;
+      font-family: var(--font-primary);
+      color: var(--white);
+    }
+    & li span {
+      transition: 0.5s ease-in-out;
+    }
+    & li:hover a {
+      color: var(--hover-nav);
+    }
+    & li:hover > span {
+      height: 1px;
+      width: 100%;
+      background-color: var(--teal);
+    }
+  }
+
+  &__contact {
+    color: var(--white);
+    &-content {
+      border-left: 1px solid var(--white);
+    }
+  }
+}
