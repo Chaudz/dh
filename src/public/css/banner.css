@@ -1,0 +1,31 @@
+.header__banner {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: var(--gray-200); }
+  .header__banner__imgs img {
+    position: absolute;
+    object-fit: cover; }
+  .header__banner__imgs .item.active {
+    display: block; }
+  .header__banner__imgs .item {
+    display: none; }
+  .header__banner__btn {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--white); }
+  .header__banner__btn--left {
+    left: 2rem; }
+  .header__banner__btn--right {
+    right: 2rem; }
+  .header__banner__nav-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%); }
