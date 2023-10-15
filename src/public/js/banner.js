@@ -17,7 +17,6 @@ let refreshInterval = setInterval(() => {
   nextBtn.click();
 }, 3000);
 function reloadSlider(type, index = 0) {
-  console.log(index);
   if (type == "next") {
     if (active == 0) {
       listSlider[listSlider.length - 1].classList.remove("active");
