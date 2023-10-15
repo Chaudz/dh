@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
 @import url(bootstrap/dist/css/bootstrap.min.css);
 :root {
   --blue: #0d6efd;
@@ -34,7 +35,8 @@
   --dark: #212529;
   --font-primary: "Poppins", sans-serif;
   --header-bg: rgb(13 54 85 / 90%);
-  --hover-nav: #4cff00; }
+  --hover-nav: #4cff00;
+  --font-card-title: "Lora", serif; }
 
 body {
   margin: 0; }
