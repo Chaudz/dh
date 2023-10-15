@@ -175,27 +175,11 @@
       </a>
     </div>
     <footer>fooôter</footer>
-    <button class="btn-scroll position-fixed">
-      <i class="bi bi-arrow-up"></i>
-    </button>
+    <%- include("./partials/scrollToZero.ejs") %>
     </div>
     <script src="js/banner.js"></script>
     <script src="js/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll/dist/smooth-scroll.min.js"></script>
-    <script>
-      let scrollToZeroBtn = document.querySelector('.btn-scroll')
-      window.addEventListener('scroll',()=>{
-      
-       if(scrollY > 700){
-        scrollToZeroBtn.style.display ='block';
-       }
-       else{
-         scrollToZeroBtn.style.display ='none';
-       }
-      })
-      scrollToZeroBtn.onclick =()=>{
-         window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
+    <script src="js/scrollToZero.js"></script>
   </body>
 </html>
