@@ -36,7 +36,8 @@
   --font-primary: "Poppins", sans-serif;
   --header-bg: rgb(13 54 85 / 90%);
   --hover-nav: #4cff00;
-  --font-card-title: "Lora", serif; }
+  --font-card-title: "Lora", serif;
+  --footer-bg: var(--dark); }
 
 body {
   margin: 0; }
