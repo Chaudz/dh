@@ -27,46 +27,7 @@
     <div class="position-relative">
     <header class="header">
       <%- include("../partials/banner.ejs") %>
-    <div class="header__wrapper d-flex align-items-center justify-content-between">
-      <div class="header__logo">
-        <img src="/imgs/logo.jpg" alt="" class="w-100 h-100" />
-      </div>
-      <ul class="header__nav d-md-flex justify-content-center gap-3">
-        <li class="position-relative">
-          <a href="">Giới thiệu</a>
-          <span class="position-absolute bottom-0 start-0"></span>
-        </li>
-        <li class="position-relative">
-          <a href="">Thực đơn</a>
-          <span class="position-absolute bottom-0 start-0"></span>
-        </li>
-        <li class="position-relative">
-          <a href="">Dịch vụ</a>
-          <span class="position-absolute bottom-0 start-0"></span>
-        </li>
-        <li class="position-relative">
-          <a href="">Đặt bàn</a>
-          <span class="position-absolute bottom-0 start-0"></span>
-        </li>
-        <li class="position-relative">
-          <a href="">Tiệc tùng</a>
-          <span class="position-absolute bottom-0 start-0"></span>
-        </li>
-      </ul>
-      <div class="header__contact d-md-flex align-items-center">
-        <div class="header__contact-icon pe-2">
-          <i class="bi bi-telephone-fill"></i>
-        </div>
-        <div class="header__contact-content ps-2">
-          <p class="m-0">Liên hệ</p>
-          <p class="m-0 fw-bold">0262091690</p>
-        </div>
-      </div>
-      <button class="header-btn__menu-icon">
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
-
+      <%- include("../partials/header.ejs") %>
     </header>
     <!-- ỉntroduce -->
     <div class="introduce p-4 d-flex flex-column align-items-center">
