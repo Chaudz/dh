@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { UIController } from "../controllers";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.render("home");
-});
+router.get("/", UIController.home);
 
 export default router;

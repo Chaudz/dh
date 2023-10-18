@@ -25,11 +25,21 @@
       background-color: rgba($color: #000000, $alpha: 0.4);
       color: var(--white);
     }
-    &__btn--left {
-      left: 2rem;
+    @media (min-width: 768px) {
+      &__btn--left {
+        left: 2rem;
+      }
+      &__btn--right {
+        right: 2rem;
+      }
     }
-    &__btn--right {
-      right: 2rem;
+    @media (max-width: 768px) {
+      &__btn--left {
+        left: 0.5rem;
+      }
+      &__btn--right {
+        right: 0.5rem;
+      }
     }
     &__nav-btn {
       position: absolute;

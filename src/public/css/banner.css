@@ -20,10 +20,16 @@
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0.4);
     color: var(--white); }
-  .header__banner__btn--left {
-    left: 2rem; }
-  .header__banner__btn--right {
-    right: 2rem; }
+  @media (min-width: 768px) {
+    .header__banner__btn--left {
+      left: 2rem; }
+    .header__banner__btn--right {
+      right: 2rem; } }
+  @media (max-width: 768px) {
+    .header__banner__btn--left {
+      left: 0.5rem; }
+    .header__banner__btn--right {
+      right: 0.5rem; } }
   .header__banner__nav-btn {
     position: absolute;
     bottom: 1rem;

@@ -19,12 +19,14 @@
     width: 100%;
     padding: 0.5rem 2.5rem;
   }
-  &__wrapper.active {
-    animation-name: fade-in;
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
+  @media (min-width: 768px) {
+    &__wrapper.active {
+      animation-name: fade-in;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
   }
   &__logo {
     width: 70px;
@@ -58,6 +60,46 @@
     color: var(--white);
     &-content {
       border-left: 1px solid var(--white);
+    }
+  }
+  &-btn__menu-icon {
+    height: 50px;
+    width: 50px;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    &__wrapper {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+    }
+    &__nav {
+      padding: 20px !important;
+      display: none;
+      top: 100%;
+      position: absolute;
+      width: 100vw;
+      right: 0;
+      background-color: var(--black);
+      & li {
+        padding: 1rem !important;
+      }
+      & li span {
+        display: none;
+      }
+    }
+    &__nav.active {
+      display: block;
+    }
+    &__contact {
+      display: none;
+    }
+    &-btn__menu-icon {
+      font-size: 2rem;
+      background-color: transparent;
+      color: var(--white);
+      display: block;
     }
   }
 }

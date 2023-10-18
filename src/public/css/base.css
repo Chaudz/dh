@@ -42,6 +42,10 @@
 body {
   margin: 0; }
 
+@media (max-width: 768px) {
+  :root {
+    font-size: 10px !important; } }
+
 button {
   border: none; }
 

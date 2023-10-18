@@ -16,15 +16,30 @@
     }
   }
   &__location {
+    max-width: 400px;
+    color: var(--white);
     &-title {
       font-size: 1.3rem;
     }
-    color: var(--white);
+    &-map {
+      width: 100%;
+    }
+    &-map iframe {
+      object-fit: cover;
+      width: 100%;
+      max-height: 200px;
+    }
   }
   &__society {
     &-title {
       font-size: 1.3rem;
     }
     color: var(--white);
+  }
+  @media (max-width: 768px) {
+    p {
+      margin: 0;
+      text-align: center;
+    }
   }
 }

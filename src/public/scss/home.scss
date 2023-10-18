@@ -9,6 +9,12 @@
   }
   &__wrapper-cards {
   }
+  @media (max-width: 768px) {
+    &__card {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  }
   &__card {
     width: 32%;
     height: 100%;
@@ -56,6 +62,12 @@
     font-size: 2.5rem;
     font-family: var(--font-card-title);
   }
+  @media (max-width: 768px) {
+    &-card {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  }
   &-card {
     margin-top: 1rem;
     border: 1px solid #86b7fe;
@@ -83,6 +95,12 @@
     color: var(--green);
     font-size: 2.5rem;
     font-family: var(--font-card-title);
+  }
+  @media (max-width: 768px) {
+    &-card {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
   }
   &-card {
     width: 48%;

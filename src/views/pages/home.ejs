@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title><%= title %></title>
+    <link rel="shortcut icon" type="x-icon" href="/imgs/logo.jpg">
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="stylesheet" href="/css/banner.css" />
     <link rel="stylesheet" href="/css/header.css" />
@@ -25,8 +26,47 @@
   <body>
     <div class="position-relative">
     <header class="header">
-      <%- include("./partials/banner.ejs") %>
-      <%-include("./partials/header.ejs") %>
+      <%- include("../partials/banner.ejs") %>
+    <div class="header__wrapper d-flex align-items-center justify-content-between">
+      <div class="header__logo">
+        <img src="/imgs/logo.jpg" alt="" class="w-100 h-100" />
+      </div>
+      <ul class="header__nav d-md-flex justify-content-center gap-3">
+        <li class="position-relative">
+          <a href="">Giới thiệu</a>
+          <span class="position-absolute bottom-0 start-0"></span>
+        </li>
+        <li class="position-relative">
+          <a href="">Thực đơn</a>
+          <span class="position-absolute bottom-0 start-0"></span>
+        </li>
+        <li class="position-relative">
+          <a href="">Dịch vụ</a>
+          <span class="position-absolute bottom-0 start-0"></span>
+        </li>
+        <li class="position-relative">
+          <a href="">Đặt bàn</a>
+          <span class="position-absolute bottom-0 start-0"></span>
+        </li>
+        <li class="position-relative">
+          <a href="">Tiệc tùng</a>
+          <span class="position-absolute bottom-0 start-0"></span>
+        </li>
+      </ul>
+      <div class="header__contact d-md-flex align-items-center">
+        <div class="header__contact-icon pe-2">
+          <i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="header__contact-content ps-2">
+          <p class="m-0">Liên hệ</p>
+          <p class="m-0 fw-bold">0262091690</p>
+        </div>
+      </div>
+      <button class="header-btn__menu-icon">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
     </header>
     <!-- ỉntroduce -->
     <div class="introduce p-4 d-flex flex-column align-items-center">
@@ -34,7 +74,7 @@
         Chào mừng tới nhà hàng Đại Hằng
       </p>
       <div
-        class="introduce__wrapper-cards w-100 d-flex justify-content-between"
+        class="introduce__wrapper-cards w-100 d-flex align-items-center flex-column flex-md-row d-md-flex justify-content-md-between"
       >
         <div class="introduce__card">
           <div class="introduce__card-img w-100 position-relative">
@@ -92,7 +132,7 @@
     <div class="menu w-100 p-4 d-flex flex-column align-items-center">
       <p class="menu-title">Thực đơn</p>
       <div
-        class="menu__warpper-cards w-100 mt-4 d-flex flex-wrap justify-content-between"
+        class="menu__warpper-cards w-100 mt-4 d-flex flex-md-row flex-column align-items-center flex-md-wrap justify-content-md-between"
       >
         <div class="menu-card d-flex flex-column align-items-center">
           <div class="menu-card__img w-100">
@@ -149,7 +189,7 @@
     <!-- party -->
     <div class="party p-4 d-flex flex-column align-items-center">
       <p class="party-title text-center">Tiệc tùng</p>
-      <div class="party__warpper-cards w-100 d-flex justify-content-between">
+      <div class="party__warpper-cards w-100 d-flex flex-md-row flex-column justify-content-md-between">
         <div class="party-card position-relative">
           <img src="/imgs/party1.jpg" alt="">
           <div class="party-card__wrapper-desc position-absolute bottom-0 w-100">
@@ -163,7 +203,6 @@
             <div class="party-card__desc-overlay w-100"></div>
              <p class="party-card__desc px-3 text-center w-100 position-absolute top-50">Nhận tổ chức tiệc tùng,gala karake,... tại nhà hàng</p>
           </div>
-          
         </div>
       </div>
       <a href="">
@@ -176,11 +215,20 @@
       </a>
     </div>
     <!-- footer -->
-    <%- include("./partials/footer.ejs") %>
-    <%- include("./partials/scrollToZero.ejs") %>
+    <%- include("../partials/footer.ejs") %>
+    <%- include("../partials/scrollToZero.ejs") %>
     </div>
     <script src="js/banner.js"></script>
     <script src="js/header.js"></script>
     <script src="js/scrollToZero.js"></script>
+    <script>
+      const navMenu = document.querySelector('.header__nav')
+      const collapseMenuBtn = document.querySelector('.header-btn__menu-icon');
+      
+      collapseMenuBtn.onclick =()=>{
+        console.log('ok');
+        navMenu.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
