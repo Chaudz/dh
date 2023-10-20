@@ -26,6 +26,8 @@
     .header__banner__btn--right {
       right: 2rem; } }
   @media (max-width: 768px) {
+    .header__banner {
+      height: 250px; }
     .header__banner__btn--left {
       left: 0.5rem; }
     .header__banner__btn--right {
