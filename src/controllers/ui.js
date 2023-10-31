@@ -5,6 +5,11 @@ class UIController {
   menu(req, res) {
     return res.render("pages/menu", { title: "Menu cơm hải sản Đại Hằng" });
   }
+  space(req, res) {
+    return res.render("pages/restaurant_space", {
+      title: "Không gian nhà hàng Đại Hằng",
+    });
+  }
 }
 
 export default new UIController();

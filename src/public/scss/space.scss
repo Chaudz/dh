@@ -1,0 +1,62 @@
+.space {
+  &-banner {
+    height: 300px;
+    width: 100%;
+    background-image: url("../imgs/banner-space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &-floor {
+    &1__slides,
+    &2__slides,
+    &3__slides,
+    &4__slides,
+    &5__slides {
+      height: 300px;
+    }
+    @media (max-width: 768px) {
+      &1__slides,
+      &2__slides,
+      &3__slides,
+      &4__slides,
+      &5__slides {
+        height: 150px;
+      }
+    }
+    &__img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &__img {
+      display: none;
+    }
+    &__img.active {
+      display: block;
+    }
+    &__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__btns {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__btn-left,
+    &__btn-right {
+      border-radius: 999px;
+      height: 50px;
+      width: 50px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    &__btn-left i,
+    &__btn-right i {
+      font-size: 2rem;
+      color: var(--white);
+    }
+  }
+}

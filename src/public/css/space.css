@@ -1,0 +1,47 @@
+.space-banner {
+  height: 300px;
+  width: 100%;
+  background-image: url("../imgs/banner-space.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.space-floor1__slides, .space-floor2__slides, .space-floor3__slides, .space-floor4__slides, .space-floor5__slides {
+  height: 300px; }
+
+@media (max-width: 768px) {
+  .space-floor1__slides, .space-floor2__slides, .space-floor3__slides, .space-floor4__slides, .space-floor5__slides {
+    height: 150px; } }
+
+.space-floor__img {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.space-floor__img {
+  display: none; }
+
+.space-floor__img.active {
+  display: block; }
+
+.space-floor__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.space-floor__btns {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.space-floor__btn-left, .space-floor__btn-right {
+  border-radius: 999px;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.space-floor__btn-left i,
+.space-floor__btn-right i {
+  font-size: 2rem;
+  color: var(--white); }
