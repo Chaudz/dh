@@ -23,6 +23,13 @@
       &5__slides {
         height: 150px;
       }
+      &__btn-left,
+      &__btn-right {
+        border-radius: 999px;
+        height: 30px !important;
+        width: 30px !important;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
     }
     &__img {
       position: absolute;
@@ -41,6 +48,7 @@
       object-fit: cover;
     }
     &__btns {
+      padding: 0 10px;
       width: 100%;
       position: absolute;
       top: 50%;

@@ -11,7 +11,12 @@
 
 @media (max-width: 768px) {
   .space-floor1__slides, .space-floor2__slides, .space-floor3__slides, .space-floor4__slides, .space-floor5__slides {
-    height: 150px; } }
+    height: 150px; }
+  .space-floor__btn-left, .space-floor__btn-right {
+    border-radius: 999px;
+    height: 30px !important;
+    width: 30px !important;
+    background-color: rgba(0, 0, 0, 0.4); } }
 
 .space-floor__img {
   position: absolute;
@@ -30,6 +35,7 @@
   object-fit: cover; }
 
 .space-floor__btns {
+  padding: 0 10px;
   width: 100%;
   position: absolute;
   top: 50%;
