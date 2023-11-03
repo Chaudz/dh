@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="shortcut icon" type="x-icon" href="/imgs/logo.jpg" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/btn_scroll.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/book_table.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="position-relative">
+      <header class="header"><%- include("../partials/header.ejs") %></header>
+      <!-- book table page -->
+      <div class="book-table">
+        <div class="book-table__banner"></div>
+        <div class="p-4 mt-2">
+          <div class="book-table__title fw-bold text-center">
+            Đặt bàn ngay tại Đại Hằng
+          </div>
+          <div class="book-table__wrapper-content d-flex flex-column">
+            <div
+              class="d-flex flex-column flex-md-row align-items-center justify-content-between"
+            >
+              <div>
+                <label for="day" class="mb-2">Ngày:</label>
+                <br />
+                <input
+                  class="mb-3"
+                  type="text"
+                  id="datepicker"
+                  name="day"
+                  placeholder="Ngày dùng bữa?"
+                />
+              </div>
+              <div>
+                <label for="time" class="mb-2">Thời gian:</label>
+                <br />
+                <input
+                  class="mb-3"
+                  type="text"
+                  id="time"
+                  name="time"
+                  placeholder="Thời gian đặt bàn?"
+                />
+              </div>
+              <div>
+                <label for="persons" class="mb-2">Số người:</label>
+                <br />
+                <input
+                  class="mb-3"
+                  type="text"
+                  id="persons"
+                  name="persons"
+                  placeholder="Bạn có bao nhiêu người?"
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex flex-column flex-md-row align-items-center justify-content-between mt-md-4"
+            >
+              <div>
+                <label for="name" class="mb-2">Họ tên:</label>
+                <br />
+                <input
+                  class="mb-3"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ngày dùng bữa?"
+                />
+              </div>
+              <div>
+                <label for="phone" class="mb-2">Số điện thoại:</label>
+                <br />
+                <input
+                  class="mb-3"
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Thời gian đặt bàn?"
+                />
+              </div>
+              <div>
+                <label for="email" class="mb-2">Email:</label>
+                <br />
+                <input
+                  class="mb-3"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Bạn có bao nhiêu người?"
+                />
+              </div>
+            </div>
+            <div class="mt-5 d-flex align-items-center justify-content-center">
+              <div class="cross-left"></div>
+              <button class="btn btn-success mx-2">Đặt bàn</button>
+              <div class="cross-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <%- include("../partials/footer.ejs") %> <%-
+      include("../partials/scrollToZero.ejs") %>
+    </div>
+    <script src="js/header.js"></script>
+    <script src="js/scrollToZero.js"></script>
+    <script src="js/collapse_menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#datepicker").datepicker();
+      });
+    </script>
+  </body>
+</html>

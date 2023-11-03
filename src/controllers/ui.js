@@ -10,6 +10,11 @@ class UIController {
       title: "Không gian nhà hàng Đại Hằng",
     });
   }
+  bookTable(req, res) {
+    return res.render("pages/book_table", {
+      title: "Đặt bàn nhà hàng Đại Hằng",
+    });
+  }
 }
 
 export default new UIController();

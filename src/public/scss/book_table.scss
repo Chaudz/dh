@@ -1,0 +1,29 @@
+.book-table {
+  &__banner {
+    height: 300px;
+    width: 100%;
+    background-image: url("../imgs/banner-book-table.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__title {
+    font-size: var(--font-size-title);
+    font-family: var(--font-card-title);
+  }
+  &__wrapper-content input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #0a0a0a2b;
+    box-shadow: 1px 2px 3px var(--black);
+  }
+  &__wrapper-content input:focus-visible {
+    outline: none;
+  }
+  & .cross-left,
+  & .cross-right {
+    width: 30%;
+    height: 1px;
+    background-color: #008a0673;
+  }
+}
