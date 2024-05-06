@@ -15,13 +15,13 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      box-shadow: 18px 20px 11px 0px #120f0f63;
     }
   }
   &__wrapper-img {
-    width: 70%;
     & img {
+      border-radius: 10px;
       width: 100%;
+      object-fit: cover;
     }
   }
 }

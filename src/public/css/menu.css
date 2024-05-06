@@ -12,10 +12,9 @@
   font-size: 3.5rem;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 18px 20px 11px 0px #120f0f63; }
+  transform: translate(-50%, -50%); }
 
-.menu__wrapper-img {
-  width: 70%; }
-  .menu__wrapper-img img {
-    width: 100%; }
+.menu__wrapper-img img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover; }
