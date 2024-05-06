@@ -19,7 +19,7 @@
     width: 100%;
     padding: 0.5rem 2.5rem;
     backdrop-filter: blur(12px);
-    --webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   @media (min-width: 768px) {
     &__wrapper.active {
