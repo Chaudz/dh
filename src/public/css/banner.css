@@ -1,15 +1,16 @@
 .header__banner {
   position: relative;
-  height: 400px;
+  height: 600px;
   width: 100%;
   background-color: var(--gray-200); }
   .header__banner__imgs img {
     position: absolute;
     object-fit: cover; }
   .header__banner__imgs .item.active {
-    display: block; }
+    opacity: 1; }
   .header__banner__imgs .item {
-    display: none; }
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; }
   .header__banner__btn {
     height: 60px;
     width: 60px;
@@ -18,8 +19,28 @@
     transform: translateY(-50%);
     border-radius: 50%;
     font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(224, 221, 221, 0.3);
     color: var(--white); }
+    .header__banner__btn--left, .header__banner__btn--right {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .header__banner__nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; }
+    .header__banner__nav-btn .radio {
+      display: none; }
+    .header__banner__nav-btn label {
+      width: 30px;
+      height: 5px;
+      background-color: var(--gray-500);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; }
+    .header__banner__nav-btn .radio:checked + label {
+      background-color: var(--primary); }
   @media (min-width: 768px) {
     .header__banner__btn--left {
       left: 2rem; }
@@ -27,11 +48,14 @@
       right: 2rem; } }
   @media (max-width: 768px) {
     .header__banner {
-      height: 300px; }
+      height: 215px; }
     .header__banner__btn--left {
       left: 0.5rem; }
     .header__banner__btn--right {
-      right: 0.5rem; } }
+      right: 0.5rem; }
+    .header__banner__imgs img {
+      position: absolute;
+      object-fit: contain; } }
   .header__banner__nav-btn {
     position: absolute;
     bottom: 1rem;

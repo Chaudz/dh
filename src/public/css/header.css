@@ -1,5 +1,6 @@
 .header {
-  width: 100%; }
+  width: 100%;
+  box-shadow: 1px 2px 3px #a7a7a7; }
 
 @keyframes fade-in {
   from {
@@ -15,7 +16,8 @@
     background-color: var(--header-bg);
     width: 100%;
     padding: 0.5rem 2.5rem;
-    backdrop-filter: blur(12px); }
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); }
   @media (min-width: 768px) {
     .header__wrapper.active {
       animation-name: fade-in;
@@ -32,7 +34,7 @@
   .header__nav {
     flex: 1; }
     .header__nav li a {
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-family: var(--font-primary);
       color: var(--white); }
     .header__nav li span {
@@ -44,9 +46,9 @@
       width: 100%;
       background-color: var(--teal); }
   .header__contact {
-    color: var(--white); }
+    color: var(--black); }
     .header__contact-content {
-      border-left: 1px solid var(--white); }
+      border-left: 1px solid var(--black); }
   .header-btn__menu-icon {
     height: 50px;
     width: 50px;

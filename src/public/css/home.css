@@ -2,73 +2,191 @@
   margin-top: 3.5rem;
   width: 100%; }
   .introduce-title {
-    color: var(--green);
+    color: var(--black);
     font-size: 2.5rem;
-    font-family: var(--font-card-title); }
+    font-family: var(--font-card-title);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #ff6f61, #d33f49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative; }
+  .introduce-btn {
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; }
+    .introduce-btn:hover {
+      background-color: var(--green);
+      color: var(--white);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); }
+    .introduce-btn:hover::before {
+      left: 100%; }
+    .introduce-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); }
+    .introduce-btn:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 300%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease-in-out; }
   @media (max-width: 768px) {
     .introduce__card {
-      width: 100% !important;
-      margin-bottom: 10px; } }
+      width: 90% !important;
+      margin-bottom: 10px; }
+      .introduce__card-img {
+        height: 200px; } }
+  @media (min-width: 768px) {
+    .introduce__card-img {
+      height: 300px; } }
   .introduce__card {
     width: 32%;
-    height: 100%; }
+    height: auto;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: var(--white); }
     .introduce__card-img {
-      border-radius: 10px;
-      height: 300px;
-      overflow: hidden; }
+      border-radius: 1px;
+      overflow: hidden;
+      position: relative; }
     .introduce__card-img__overlay {
-      border-radius: 10px;
-      background-color: var(--white);
-      opacity: 0.1; }
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.2);
+      opacity: 0.1;
+      transition: opacity 0.3s ease-in-out; }
     .introduce__card-img:hover > img {
       transform: scale(1.2); }
     .introduce__card-img img {
       max-height: 300px;
-      border-radius: 10px;
       height: 100%;
       object-fit: cover;
-      transition: 1s; }
+      transition: transform 0.5s ease-in-out; }
     .introduce__card-title {
       font-size: 1.5rem;
       font-family: var(--font-primary);
-      color: var(--primary); }
+      color: var(--primary);
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease-in-out; }
+      .introduce__card-title:hover {
+        color: var(--accent); }
     .introduce__card-describe {
-      font-weight: 300; }
+      font-weight: 300;
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--secondary);
+      padding: 0 15px;
+      line-height: 1.5;
+      transition: color 0.3s ease-in-out; }
+      .introduce__card-describe:hover {
+        color: var(--accent-light); }
   .introduce-btn {
     border-radius: 5px;
     font-size: 1.1rem;
     font-family: var(--font-card-title); }
 
 .menu-title {
-  color: var(--green);
+  color: var(--black);
   font-size: 2.5rem;
   font-family: var(--font-card-title);
-  font-weight: bold; }
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #ff6f61, #d33f49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative; }
 
 @media (max-width: 768px) {
   .menu-card {
-    width: 100% !important;
-    margin-bottom: 10px; } }
+    width: 90% !important;
+    margin-bottom: 10px; }
+    .menu-card__img img {
+      max-height: 200px !important; } }
 
 .menu-card {
-  margin-top: 1rem;
-  border: 1px solid #ccc;
-  width: 32%; }
+  width: 32%;
+  height: auto;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: var(--white);
+  position: relative; }
+  .menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); }
   .menu-card__img img {
     max-height: 300px;
     object-fit: cover; }
   .menu-card__title {
+    font-size: 1.5rem;
+    font-family: var(--font-primary);
+    color: var(--primary);
+    margin-top: 15px;
     text-align: center;
-    font-size: 1.6rem; }
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out; }
+    .menu-card__title:hover {
+      color: var(--accent); }
   .menu-card__describe {
-    text-align: center;
+    font-weight: 300;
     font-size: 1.2rem;
-    font-weight: 300; }
+    text-align: center;
+    color: var(--secondary);
+    padding: 0 15px;
+    line-height: 1.5;
+    transition: color 0.3s ease-in-out; }
+    .menu-card__describe:hover {
+      color: var(--accent-light); }
 
 .party-title {
-  color: var(--green);
+  color: var(--black);
   font-size: 2.5rem;
-  font-family: var(--font-card-title); }
+  font-family: var(--font-card-title);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #ff6f61, #d33f49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative; }
+
+.party__wrapper-cards {
+  width: 90% !important; }
 
 @media (max-width: 768px) {
   .party-card {
@@ -77,7 +195,8 @@
 
 .party-card {
   width: 48%;
-  overflow: hidden; }
+  overflow: hidden;
+  border-radius: 15px; }
   .party-card img {
     object-fit: cover;
     width: 100%;
