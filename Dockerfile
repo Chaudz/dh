@@ -1,20 +1,15 @@
-# Sử dụng image Node.js phiên bản 14 làm image cơ sở
 FROM node:14
 
-# Thiết lập thư mục làm việc cho ứng dụng
 WORKDIR /usr/src/app
 
-# Sao chép các file package.json và package-lock.json (nếu có) vào container
 COPY package*.json ./
 
-# Cài đặt các dependencies từ package.json
 RUN npm install
 
-# Sao chép toàn bộ mã nguồn vào thư mục làm việc của container
-COPY . .
+# Sao chép toàn bộ thư mục src vào thư mục làm việc
+COPY src/ ./src
 
-# Mở cổng 3000 để ứng dụng có thể truy cập từ bên ngoài container
+# Chuyển vào thư mục src để chạy ứng dụng
+CMD ["node", "src/app.js"]
+
 EXPOSE 3000
-
-# Khởi chạy ứng dụng với file app.js
-CMD ["node", "app.js"]
