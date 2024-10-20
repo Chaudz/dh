@@ -1,9 +1,11 @@
 import express from "express";
 import path from "path";
-import indexRouter from "./routers";
-import adminRouter from "./routers/admin";
-
+import { fileURLToPath } from 'url';
+import indexRouter from "./routers/index.js";
+import adminRouter from "./routers/admin.js";
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.set("views", path.join(__dirname, "views")); // specify the views directory
 app.set("view engine", "ejs"); // register the template engine
