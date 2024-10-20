@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "start": "nodemon --exec babel-node ./src/index.js",
     "watch": "node-sass --watch ./src/public/scss -o ./src/public/css"
