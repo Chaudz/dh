@@ -10,6 +10,6 @@ RUN npm install
 COPY src/ ./src
 
 # Chuyển vào thư mục src để chạy ứng dụng
-CMD ["node", "src/app.js"]
+CMD ["node", "src/index.js"]
 
 EXPOSE 3000
